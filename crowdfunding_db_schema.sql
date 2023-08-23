@@ -57,7 +57,7 @@ ALTER TABLE campaign
 	ALTER launched_date TYPE date USING TO_DATE(launched_date,'YYYY-MM-DD'),
 	ALTER end_date TYPE date USING TO_DATE(end_date,'YYYY-MM-DD');
 
--- Add FOREIGN KEYS constraints
+-- STEP 5: Add FOREIGN KEYS constraints
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_contact_id" FOREIGN KEY("contact_id")
 REFERENCES "contact" ("contact_id");
 
@@ -66,3 +66,10 @@ REFERENCES "category" ("category_id");
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
 REFERENCES "subcategory" ("subcategory_id");
+
+-- STEP 6: Use SELECT on each tables to check the data
+-- NOTE: please execute the queries one by one
+SELECT * FROM campaign;
+SELECT * FROM category;
+SELECT * FROM subcategory;
+SELECT * FROM contact;
