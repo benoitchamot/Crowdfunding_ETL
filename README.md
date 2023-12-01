@@ -1,7 +1,5 @@
 # Crowdfunding_ETL
-Repository for Monash University Bootcamp Project 2
-
-Students: Benoit Chamot, Mireille Walton, Nairui (David) Guo
+Authors: Benoit Chamot, Mireille Walton, Nairui (David) Guo
 
 ## File structure
 - `Resources` directory includes all the .XLSX files used for import and the exported .CSV files
